@@ -30,6 +30,7 @@ module RailsAdmin
     end
 
     def to_model_name(param)
+      return nil unless param
       model_name = param.split("~").map(&:camelize).join("::")
     end
 
